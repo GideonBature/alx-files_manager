@@ -23,7 +23,7 @@ class UsersController {
     const userId = await dbClient.createUser(email, hashedPassword);
 
     // Return the new user's email and id
-    return res.status(201).json({ id: userId, email });
+    res.status(201).json({ id: userId, email });
   }
 }
 
