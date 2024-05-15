@@ -13,6 +13,7 @@ class UsersController {
 
     // Check if the email already exists in the database
     const emailExists = await dbClient.userExists(email);
+
     if (emailExists) {
       return res.status(400).json({ error: 'Already exist' });
     }
@@ -22,7 +23,7 @@ class UsersController {
     const userId = await dbClient.createUser(email, hashedPassword);
 
     // Return the new user's email and id
-    res.status(201).json({ id: userId, email });
+    return res.status(201).json({ id: userId, email });
   }
 }
 
