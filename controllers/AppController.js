@@ -3,7 +3,7 @@ const dbClient = require('../utils/db');
 
 // Assuming a Redis client has similar methods for the example
 const redisClient = {
-  isAlive: () => true // Placeholder function for Redis connectivity
+  isAlive: () => true, // Placeholder function for Redis connectivity
 };
 
 class AppController {
